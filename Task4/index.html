@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Watch Inventory</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+<aside class="sidebar">
+  <h2>Yogesh</h2>
+  <nav class="sidebar">
+    <a href="#home" class="active">Home</a>
+    <a href="#inventory">Inventory</a>
+    <a href="#tasks">Tasks</a>
+    <a href="#contact">Contact</a>
+    </nav>
+</aside>
+
+<main class="main">
+  <header class="hero">
+    <h1>Building the <span>Future</span> of Watches.</h1>
+    <p>Premium watch inventory with filtering & sorting.</p>
+
+    <div class="stats">
+      <div><h2>04</h2><p>Brands</p></div>
+      <div><h2>12+</h2><p>Models</p></div>
+    </div>
+  </header>
+
+  <section class="inventory" id="inventory">
+    <h2>Watch Inventory</h2>
+    <p class="sub">Filter by brand and sort by price</p>
+
+    <div class="controls">
+      <div class="filters">
+        <button onclick="filterBrand('all')" class="active">All</button>
+        <button onclick="filterBrand('rolex')">Rolex</button>
+        <button onclick="filterBrand('omega')">Omega</button>
+        <button onclick="filterBrand('seiko')">Seiko</button>
+        <button onclick="filterBrand('apple')">Apple</button>
+      </div>
+
+      <select onchange="sortByPrice(this.value)">
+        <option value="">Sort by</option>
+        <option value="low">Price: Low → High</option>
+        <option value="high">Price: High → Low</option>
+      </select>
+    </div>
+    <div class="grid" id="watchGrid"></div>
+  </section>
+
+  <section id="tasks" class="inventory">
+  <h2>Task Manager</h2>
+  <p class="sub">Manage your daily tasks</p>
+
+  <div class="task-box">
+    <input type="text" id="taskInput" placeholder="Enter task" />
+    <button onclick="addTask()">Add Task</button>
+  </div>
+
+  <ul id="taskList"></ul>
+  </section>
+
+
+  <section class="contact" id="contact">
+  <h2>Contact</h2>
+
+  <p>📞 <a href="tel:+919876543210">+91 98765 43210</a></p>
+  <p>📧 <a href="mailto:yourname@gmail.com">yourname@gmail.com</a></p>
+  </section>
+</main>
+
+<script src="style.js"></script>
+</body>
+</html>

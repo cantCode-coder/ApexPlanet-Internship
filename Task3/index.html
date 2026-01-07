@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Advanced Styling & JavaScript</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header class="header">
+        <h1>Advanced Styling & JavaScript</h1>
+        <p>Responsive Design • Quiz • API Fetch</p>
+    </header>
+
+    <section class="quiz-section">
+        <h2>JavaScript Quiz</h2>
+        <p id="question"></p>
+
+        <div class="options">
+            <button onclick="checkAnswer(0)"></button>
+            <button onclick="checkAnswer(1)"></button>
+            <button onclick="checkAnswer(2)"></button>
+            <button onclick="checkAnswer(3)"></button>
+        </div>
+
+        <p id="result"></p>
+    </section>
+
+    <section class="api-section">
+        <h2>Random Joke Generator</h2>
+        <p id="joke">Click the button to get a joke</p>
+        <button onclick="getJoke()">Get Joke</button>
+    </section>
+
+    <script src="style.js"></script>
+</body>
+</html>
